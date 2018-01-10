@@ -21,7 +21,17 @@ for i in range(len(dcmFiles)):
     file = dicom.read_file(dcmFiles[i])
     mod = file.Modality
     if (mod == "MR") or (mod == "CT"):
-        dcmImages.append(file.pixel_array)
+        print(file.RescaleSlope)
+        if file.RescaleSlope != 1:
+            slope = file.RescaleSlope
+        else:
+            slope = 1
+        if file.RescaleIntercept != 0:
+            intercept = file.RescaleIntercpet
+        else:
+            intercept = 0
+
+        dcmImages.append(file.pixel_array * slope + intercept)
         sliceNum.append(file[0x20, 0x13].value)  # InstanceNumber
         imagePos.append(file[0x20, 0x32].value)  # ImagePosition
     elif mod == "RTSTRUCT":

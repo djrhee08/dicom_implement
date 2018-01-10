@@ -40,7 +40,5 @@ def flipud(dcmimage):
 
 ### bit resampling ###
 def bit8resample(dcmimage):
+    return dcmimage
 
-
-
-### Filters ###
