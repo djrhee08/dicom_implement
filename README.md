@@ -9,8 +9,9 @@ Modify DICOM data to feed the deep learning segmentation network
 Python numpy, scipy, skimage, dicom
 
 
-## Running the tests
+## mat2numpy.py
 
+.mat file used for mat2numpy is created from inpoly_test_v2.m(https://github.com/djrhee08/dicom_to_mask)
 
 
 ## Versioning
