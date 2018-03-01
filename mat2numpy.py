@@ -1,4 +1,5 @@
 import scipy.io as sio
+import numpy as np
 
 def loadimage(fname='image.mat'):
     a = sio.loadmat(fname)
@@ -20,10 +21,6 @@ def parsemask(fname='mask.mat'):
         mask.append(data[0,i]['data'].item(0))
 
     return num_str, mask, name
-
-def batch_return(input, batchsize):
-    batchsize = batchsize
-    return batchsize
 
 """
 num_str, mask, name = parsemask('test_dataset/1/mask.mat')

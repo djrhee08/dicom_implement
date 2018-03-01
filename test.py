@@ -23,13 +23,12 @@ for i in range(num_str):
 
 batch_size = 10
 
+"""
 print(img1[0:10].shape)
 print(mask[num][0:10].shape)
-
-
-
-
 """
+
+
 plt.subplot(131)
 plt.imshow(img1[10],cmap='gray')
 plt.subplot(132)
@@ -40,7 +39,7 @@ plt.subplot(133)
 plt.imshow(mask[num][10],cmap='gray')
 
 plt.show()
-"""
+
 
 
 
